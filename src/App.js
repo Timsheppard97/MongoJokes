@@ -1,23 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+import PersonForm from './Components/PersonForm';
+import Main from './Main';
 
 function App() {
+  const editperson = {fname:'bob',lname:'boberson'}
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>Product Manager</h1>
       </header>
+      <Main></Main>
+      <PersonForm></PersonForm>
+      <PersonForm obj={editperson} />
     </div>
   );
 }
